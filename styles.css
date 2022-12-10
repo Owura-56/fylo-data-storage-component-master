@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{  
+--Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+--Pale-Blue: hsl(243, 100%, 93%);
+--Grayish-Blue: hsl(229, 7%, 55%);
+--Dark-Blue: hsl(228, 56%, 26%);
+--VeryDark-Blue: hsl(229, 57%, 11%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./images/bg-desktop.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    font-family: 'Raleway', sans-serif;
+    background-position:0 20rem;
+    background-color:var(--VeryDark-Blue);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 20rem 36rem;
+    grid-template-rows:1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 90rem;
+    gap: 2rem;
+    margin: auto;
+    
+}
+.grid-container>div{
+    padding: 2rem;
+    
+}
+
+.grid-item-1{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-color:var(--Dark-Blue);
+    border-top-right-radius: 5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius:0.5rem;
+    margin-top: 15.2rem;
+    margin-left: 2rem;
+    max-width: 100%;
+    
+}
+
+.icons{
+    display: flex;
+}
+.icons img{
+    margin: 1rem;
+}
+
+
+.grid-item-2{
+    grid-column: 2/3;
+    grid-row: 2/2;
+    color:var(--Pale-Blue);
+    background-color: var(--Dark-Blue); 
+    border-radius: 8px;
+    max-width: 88%;
+    margin-top: 2.9rem;
+}
+
+.grid-item-2 p{
+    margin-bottom: 1rem;
+    
+}
+#myProgress{
+    width:70%;
+    border-radius: 8px;
+    background-image:linear-gradient(to right, hsl(6, 100%, 80%) , hsl(335, 100%, 65%)) ;
+    position: absolute;
+    z-index: 2;
+    margin-top: 2px;
+}
+
+#myBar{
+    height: 1rem;
+    line-height: 1rem; 
+    margin-left: 18.2rem;
+}
+
+#myProgress-2{
+    width:100%;
+    border-radius: 8px;
+    background-color:var(--VeryDark-Blue);
+    position: absolute;
+    z-index: 1;
+}
+
+#myBar-2{
+    height:1.2rem;
+    line-height: 1rem;
+}
+
+.progress-bar{
+    position: relative;
+    
+}
+
+.gigabite{
+    display:flex;
+    margin-top: 3rem;
+    justify-content: space-between;
+}
+
+
+
+.background-icons{
+    background-color:var(--VeryDark-Blue);
+    padding:0.5rem;
+    border-radius: 0.4rem;
+}
+
+.grid-item-3{
+    grid-column: 2/2;
+    grid-row:1/-1;
+    display: flex;
+    margin-left: 21rem;
+    margin-top: 7rem;
+    background-color: white;
+    border-radius: 8px;
+    max-height: 5.5rem;
+    max-width: 25.5%;
+    max-height: 16%;
+}
+
+.grid-item-3 h1{
+    color:var(--VeryDark-Blue);
+    align-self: center;
+    margin-right: 0.4rem;
+}
+
+.grid-item-3 small{
+    color:var(--Grayish-Blue);
+    align-self: center;
+    font-weight: 900;
+    margin-right: 1rem;
+}
+.grid-item-3 small span{
+    margin-left: 0.2rem;
+}
+
+.grid-item-3 {
+	position: relative;
+	background:white;
+}
+.grid-item-3:after {
+	top: 98%;
+	left: 80%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events:none;
+}
+
+.grid-item-3:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color:white;
+	border-width: 15px;
+}
+
+@media (max-width:35em){
+    
+    body{
+        background-image: url(./images/bg-mobile.png);
+        background-size:cover;
+        background-repeat: repeat-y;
+
+    }
+    .grid-container{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      grid-template-rows:auto auto auto;
+      grid-template-columns: auto auto;
+    }
+    
+
+    .grid-item-1{
+        grid-row: 1/2;
+        grid-column: 2/2;
+        max-width: 80%;
+    }
+
+    .grid-item-2{
+        grid-row: 2/3;
+        max-width: 80%;
+        margin-left: 2rem;
+        grid-column: 2/2;
+        
+    }
+    
+
+    .grid-item-3{
+        grid-row:2/-1;
+        margin-top: 10rem;
+    }
+
+    .grid-item-3::after{
+        top: 98%;
+	    left: 80%;
+	    border:none;
+	    content: "";
+	    height: 0;
+	    width: 0;
+	    position: absolute;
+	    pointer-events:none;
+	    
+    }
+        
+    #myBar{
+        margin-left: 13rem;
+    }
+
+    .gigabite-space{
+        margin-left: 14rem;
+    }
+
+}
+
+
+ 
